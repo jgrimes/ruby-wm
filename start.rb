@@ -3,14 +3,17 @@ framework 'ApplicationServices'
 require 'rubygems'
 require 'hotkeys'
 
+framework "Carbon"
+framework "ApplicationServices"
+framework "AppKit"
+
 module Start
   LIB_DIR = File.expand_path(File.dirname(__FILE__))
   RESOURCE_DIR = "#{LIB_DIR}/../resources"
-#  require "#{LIB_DIR}/AppDelegate"
   require "#{LIB_DIR}/layout"
-  require "#{LIB_DIR}/main"
-
-
+  require "#{LIB_DIR}/ax_element"
+  require "#{LIB_DIR}/application"
+  require "#{LIB_DIR}/window"
 
   class Runner
     def setup_menu
