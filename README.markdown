@@ -4,7 +4,7 @@ ruby-wm
 A very simple implementation of a tiling window manager for OS X, in MacRuby
 ---------
 
-This is something I hacked together fairly quickly, and I am sure that it can be greatly improved. I primarily use this on a 27" screen, and usually only have 2-3 windows open at a time. It works reasonably well for this setup, but there are several problems that can occur due to the APIs used (Accessibility APIs).
+This is something I hacked together fairly quickly, and it can be greatly improved. I primarily use this on a 27" screen, and usually only have 2-3 windows open at a time. It works reasonably well for this setup, but there are several problems that can occur due to the APIs used (Accessibility APIs).
 
 * Some windows have a lower bound on how small they can get. This messes up the current tiling procedures.
 * Occasionally windows will fail to resize completely. This can usually be fixed by telling it to tile again.
