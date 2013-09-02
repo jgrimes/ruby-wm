@@ -1,5 +1,4 @@
 framework '/System/Library/Frameworks/CoreGraphics.framework'
-require 'main.rb'
 require 'hotkeys'
 
 
