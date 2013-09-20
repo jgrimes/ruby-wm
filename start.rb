@@ -45,10 +45,11 @@ module Start
     def start
       app = NSApplication.sharedApplication
       # Create the status bar item, add the menu and set the image
-
-      init_status_bar(setup_menu)
+      menu = setup_menu
+      init_status_bar(menu)
       app.setDelegate(AppDelegate.new)
       app.run
+      app.statusBar.menu = menu 
     end
   end
 end

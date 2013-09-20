@@ -6,3 +6,4 @@ Bundler.require
 
 Rake::CompileTask.new
 
+# macrubyc start.rb -o ruby-wm
