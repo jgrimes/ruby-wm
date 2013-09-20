@@ -32,6 +32,8 @@ module Start
       status_bar = NSStatusBar.systemStatusBar
       status_item = status_bar.statusItemWithLength(NSVariableStatusItemLength)
       status_item.setMenu menu
+      img = NSImage.new.initWithContentsOfFile 'ruby-wm.png'
+      status_item.setImage(img)
       status_item.setHighlightMode true
     end
 
@@ -44,7 +46,7 @@ module Start
       app = NSApplication.sharedApplication
       # Create the status bar item, add the menu and set the image
 
-      init_status_bar setup_menu
+      init_status_bar(setup_menu)
       app.setDelegate(AppDelegate.new)
       app.run
     end
