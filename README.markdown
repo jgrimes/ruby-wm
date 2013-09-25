@@ -10,6 +10,14 @@ This is something I hacked together fairly quickly, and it can be greatly improv
 * Occasionally windows will fail to resize completely. This can usually be fixed by telling it to tile again.
 * The windows will flash with focus as they are resized. This is a limitation in the API.
 
+    rvm install macruby # if needed
+
+    rvm use macruby
+
+    macgem install bundler
+
+    bundle install
+
 You can run it from the command line with `macruby start.rb`. Note: You will need to have MacRuby and the "hotkeys" MacRuby gem installed.
 * Command + Option + V tiles with the "Tall" layout, which puts focused window on the left and the rest on the right.
 * Command + Option + B tiles with the "Full" layout, which minimizes all of the windows except the focused one, and maximizes the focused one.
