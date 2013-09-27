@@ -1,7 +1,6 @@
 framework '/System/Library/Frameworks/CoreGraphics.framework'
 require 'hotkeys'
 
-
 class AppDelegate
     attr_accessor :window
     def initialize
@@ -13,9 +12,7 @@ class AppDelegate
       # Insert code here to initialize your application
       @hotkeys = HotKeys.new
 
-      puts "hey"
       @hotkeys.addHotString("V+OPTION+COMMAND") do
-        puts "hey"
         Tall.new.tile
       end
       @hotkeys.addHotString("V+OPTION") do
@@ -25,7 +22,6 @@ class AppDelegate
         Full.new.tile
       end
       @hotkeys.addHotString("X+OPTION+COMMAND+SHIFT") do
-        puts "hey"
         @saved = Saved.new
       end
       @hotkeys.addHotString("X+OPTION+COMMAND") do
@@ -43,7 +39,7 @@ end
 
 class Saved
   def initialize
-    puts "Saved"
+    puts "Saved Window Positions"
     @applications = Application.all
     @menuBarHeight = NSMenu.menuBarHeight
 
@@ -63,7 +59,7 @@ class Saved
   end
 
   def tile
-    puts "Saved Tile"
+    puts "Restored Window Positions"
     @saved_positions.each do |w,pos,size|
       w.position = pos.x, pos.y
       w.size = size.width, size.height
